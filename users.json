@@ -2,58 +2,47 @@
     "users": {
       "0": {
         "pubKey": "0235e5e3996d1437e5d73809d94d8c979fbe90e13f2008b0c8da93c7c9ac44a107",
-        "privKey": "83b377bdbb2b36fde11624c761fa80323719fc39ed3b59fe0d856df80ee20040",
-        "balance": {}
+        "privKey": "83b377bdbb2b36fde11624c761fa80323719fc39ed3b59fe0d856df80ee20040"
       },
       "1": {
         "pubKey": "03c20619c1af928c0e2fd8501141a52a6fb232a6a58613486ad9a100d580041a74",
-        "privKey": "ab6097959910db5a5fec6edd6c069d43d45ba9e5580eacf3ca984ab6ca41062b",
-        "balance": {}
+        "privKey": "ab6097959910db5a5fec6edd6c069d43d45ba9e5580eacf3ca984ab6ca41062b"
       },
       "2": {
         "pubKey": "039817140062ebdfe923ed081e805d7ece7a0f92ce74ddf554abf10efc52b5ece3",
-        "privKey": "05df04357463e289f4d951c188cb9533a1e27781c444170687c75616656b0c00",
-        "balance": {}
+        "privKey": "05df04357463e289f4d951c188cb9533a1e27781c444170687c75616656b0c00"
       },
       "3": {
         "pubKey": "03e2e49babecdb00e069c8cd8025ea3cfb59325ee05815d6fb7a71677ec029b04b",
-        "privKey": "dc7bf2db3a1150fbf89c4a17134bc28e8b633bd457eaaf92d8c683b3e8d7a9b4",
-        "balance": {}
+        "privKey": "dc7bf2db3a1150fbf89c4a17134bc28e8b633bd457eaaf92d8c683b3e8d7a9b4"
       },
       "4": {
         "pubKey": "03e74ba9ee1d540edd22802c91a60df6d52b8d647c2702b7796b7a79b3774940f0",
-        "privKey": "13e06c1e010aae318a4944607e8423aafe6ff4d5ebec8dd11f95aca85d65700f",
-        "balance": {}
+        "privKey": "13e06c1e010aae318a4944607e8423aafe6ff4d5ebec8dd11f95aca85d65700f"
       },
       "5": {
         "pubKey": "03e86052fabe91be3e63c2ed8ab42eae5852244efbd28cef638e065cc329ff4370",
-        "privKey": "2b81c20dbadcfaea9bc039b0848adb595ea246ead1c3a622dd95dc528d7e5d0d",
-        "balance": {}
+        "privKey": "2b81c20dbadcfaea9bc039b0848adb595ea246ead1c3a622dd95dc528d7e5d0d"
       },
       "6": {
         "pubKey": "02da0acca26749bb20dcd5912cea4e0c09be73cab4b1fff9df3855ca46c561e896",
-        "privKey": "3ef261aa42e142a6a10fa4c1ae6c2a13c6880ddae12cf6b61e513aecc159554d",
-        "balance": {}
+        "privKey": "3ef261aa42e142a6a10fa4c1ae6c2a13c6880ddae12cf6b61e513aecc159554d"
       },
       "7": {
         "pubKey": "02e5e4014df0b3b99effba495ae65c60aa804bcd9ea06ca4e9bf982039ac1da7cb",
-        "privKey": "48b96595e7905706fdb56f4f5578bf2b93fc6eef1d16ef8b5a496c6aa0327045",
-        "balance": {}
+        "privKey": "48b96595e7905706fdb56f4f5578bf2b93fc6eef1d16ef8b5a496c6aa0327045"
       },
       "8": {
         "pubKey": "03184207233f29d56c78d1f3245002ddfbb07ef5227932f28ad1c9a4b12495e6ed",
-        "privKey": "1b7fdfe057e6a5269c8b99df8bf917f237272522092dd4e240f5198af9d14e30",
-        "balance": {}
+        "privKey": "1b7fdfe057e6a5269c8b99df8bf917f237272522092dd4e240f5198af9d14e30"
       },
       "9": {
         "pubKey": "03cfa6849da8132b004313be7f500d35e09b87cdc1ddc275af5e45c9982935bd67",
-        "privKey": "facd08a94012d9265b18de257faf3c41b6c5ff28ae577aafb8d75401b6eba6da",
-        "balance": {}
+        "privKey": "facd08a94012d9265b18de257faf3c41b6c5ff28ae577aafb8d75401b6eba6da"
       },
       "10": {
         "pubKey": "02b884938c7acf2c5105b56acebf4c8950650e39f4b3f4209547a8ed8ffd015554",
-        "privKey": "4d89271a216a2f8281b8c7ffb1e873d4bd5ca4e749cfd38a6e7bf4c7c4262b87",
-        "balance": {}
+        "privKey": "4d89271a216a2f8281b8c7ffb1e873d4bd5ca4e749cfd38a6e7bf4c7c4262b87"
       }
     }
   }
