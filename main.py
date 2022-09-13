@@ -33,11 +33,8 @@ with open('/users.json', 'r') as userFile:
     users = json.load(userFile)
 
 
-
-
-
 #updates JSON file with data when called
 def updateJSON(ind):
-    
+
     with open('/users.json', 'w') as updateFile:
         json.dump(userFile, updateFile, indent = ind)
