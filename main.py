@@ -1,9 +1,9 @@
 import blockchain as ONUChain
 from flask import Flask, jsonify
-import json
-import datetime
-import hashlib
 
+# http://127.0.0.1:5000/mine_block
+# http://127.0.0.1:5000/get_chain
+# http://127.0.0.1:5000/valid
 
 
 app = Flask(__name__)
