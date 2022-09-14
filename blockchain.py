@@ -2,6 +2,7 @@ import json
 import datetime
 import hashlib
 
+
 class Blockchain:
 
     def __init__(self):
@@ -35,11 +36,11 @@ class Blockchain:
         checkProof = False
 
         while checkProof is False:
-
+            
             #hash the string of (newProof^2 - previousProof^2)
-            hash_operation = hashlib.sha256(str(newProof**2 - previousProof**2).encode()).hexdigest()
+            hash_operation = hashlib.md5(str(newProof**2 - previousProof**2).encode()).hexdigest()
 
-            #hashNoEncode = hashlib.sha256(
+            #hashNoEncode = hashlib.md5(
             #    str(newProof**2 - previous_proof**2)
             #).hexdigest()
 
@@ -52,13 +53,13 @@ class Blockchain:
                 checkProof = True
             else:
                 newProof += 1
-        
+
         return newProof
         
 
     def hash(self, block):
         encodedBlock = json.dumps(block, sort_keys = True).encode()
-        return hashlib.sha256(encodedBlock).hexdigest()
+        return hashlib.md5(encodedBlock).hexdigest()
 
     def chainValid(self, chain):
         previousBlock = chain[0]
@@ -71,7 +72,7 @@ class Blockchain:
 
             previousProof = previousBlock['proof']
             proof = block['proof']
-            hashOperation = hashlib.sha256(str(proof**2 - previousProof**2).encode()).hexdigest()
+            hashOperation = hashlib.md5(str(proof**2 - previousProof**2).encode()).hexdigest()
             
             if hashOperation[:5] != '00000':
                 return False

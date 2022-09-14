@@ -1,5 +1,6 @@
 import blockchain as ONUChain
 from flask import Flask, jsonify
+import time
 
 # http://127.0.0.1:5000/mine_block
 # http://127.0.0.1:5000/get_chain
@@ -14,9 +15,12 @@ blockchain = ONUChain.Blockchain()
 def mine_block():
     previousBlock = blockchain.print_previous_block()
     previousProof = previousBlock['proof']
+    start = time.time()
     proof = blockchain.proofWork(previousProof)
     previousHash = blockchain.hash(previousBlock)
     block = blockchain.createBlock(proof, previousHash)
+
+    end = time.time()
 
     response = {
         'message': "A block is Mined",
@@ -26,6 +30,7 @@ def mine_block():
         'previous_hash': block['previous_hash']
     }
 
+    print(end-start, " elapsed time")
     return jsonify(response), 200
 
 @app.route('/get_chain', methods=['GET'])
