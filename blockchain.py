@@ -40,15 +40,6 @@ class Blockchain:
             #hash the string of (newProof^2 - previousProof^2)
             hash_operation = hashlib.md5(str(newProof**2 - previousProof**2).encode()).hexdigest()
 
-            #hashNoEncode = hashlib.md5(
-            #    str(newProof**2 - previous_proof**2)
-            #).hexdigest()
-
-            #see the different without encode
-            #print(hashNoEncode)
-            #print(hash_operation)
-
-            #if the hash output returns a number with 5 0's at the end, checkProof becomes true
             if hash_operation[:5] == '00000':
                 checkProof = True
             else:
