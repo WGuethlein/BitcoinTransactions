@@ -1,3 +1,5 @@
+import math
+
 def encryption(N, m, e):
     return FEA(N, m, e)
 
@@ -13,10 +15,13 @@ def EEA(a, b):
     y = [0, 1]
 
     i = 2
-    while r[i] != 0:
-        q[i] = r[i-2] / r[i-1]
-        r[i] = r[i-2] - (q * r[i-1])
-        x[i] = x[i-2] - (q * x[i-1])
-        y[i] = y[i-2] - (q * y[i-1])
+    while True:
+        q.append(math.trunc(r[i-2] / r[i-1]))
+        r.append(r[i-2] - (q[i] * r[i-1]))
+        x.append(x[i-2] - (q[i] * x[i-1]))
+        y.append(y[i-2] - (q[i] * y[i-1]))
+        if r[i] == 0:
+            break
+        i = i + 1
 
     return y[i-1]
