@@ -1,11 +1,12 @@
 import math
+import FEA
 
 def encryption(N, m, e):
-    return FEA(N, m, e)
+    return FEA.FEA(N, m, e)
 
 
 def decryption(N, c, d):
-    return FEA(N, c, d)
+    return FEA.FEA(N, c, d)
 
 
 def EEA(a, b):

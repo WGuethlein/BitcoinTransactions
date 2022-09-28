@@ -1,6 +1,7 @@
 import blockchain as ONUChain
 from flask import Flask, jsonify
 import time
+from RSA import encryption, decryption
 
 # http://127.0.0.1:5000/mine_block
 # http://127.0.0.1:5000/get_chain
@@ -17,7 +18,7 @@ def mine_block():
     previousProof = previousBlock['proof']
     start = time.time()
     proof = blockchain.proofWork(previousProof)
-    previousHash = blockchain.hash(previousBlock)
+    previousHash = blockchain.hashWithRSA(previousBlock)
     block = blockchain.createBlock(proof, previousHash)
 
     end = time.time()
