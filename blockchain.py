@@ -48,41 +48,49 @@ class Blockchain:
     def proofWork(self, previousProof):
         newProof = 1
         checkProof = False
-        i = 1
+      
         while checkProof is False:
             
             #hash the string of (newProof^2 - previousProof^2)
             hash_operation = hashlib.md5(str(newProof**2 - previousProof**2).encode()).hexdigest()
-            
+            #if it has 5 0's at the beginning, the hash is set
             if hash_operation[:5] == '00000':
+                #set the proof to true
                 checkProof = True
+                #add the hash to the array
                 self.hash_lib.append(hash_operation)
-                i += 1
             else:
+                #if it doesnt start with 5 0's, keep checking
                 newProof += 1
 
         return newProof
         
 
     def hash(self, block):
+        #the encoded block encoded in the JSON, without this the hex will be wrong
         encodedBlock = json.dumps(block, sort_keys = True).encode()
+        # hash of the encoded block
         return hashlib.md5(encodedBlock).hexdigest()
 
 
 
     def chainValid(self, chain):
+        #first block
         previousBlock = chain[0]
         blockIndex = 1
 
+        #iterate through the chain
         while blockIndex < len(chain):
             block = chain[blockIndex]
+            #if the hash of the previous block reported doesnt match the hash actual, its not valid
             if block['previous_hash'] != self.hash(previousBlock):
                 return False
 
             previousProof = previousBlock['proof']
             proof = block['proof']
             hashOperation = hashlib.md5(str(proof**2 - previousProof**2).encode()).hexdigest()
-            
+
+            #if the first 56 digits do not equal 00000, its not valid
             if hashOperation[:5] != '00000':
                 return False
             previousBlock = block
