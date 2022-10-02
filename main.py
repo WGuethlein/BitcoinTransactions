@@ -18,7 +18,7 @@ def mine_block():
     previousProof = previousBlock['proof']
     start = time.time()
     proof = blockchain.proofWork(previousProof)
-    previousHash = blockchain.hashWithRSA(previousBlock)
+    previousHash = blockchain.hash(previousBlock)
     block = blockchain.createBlock(proof, previousHash)
 
     end = time.time()
@@ -28,7 +28,8 @@ def mine_block():
         'index': block['index'],
         'timestamp': block['timestamp'],
         'proof': block['proof'],
-        'previous_hash': block['previous_hash']
+        'previous_hash': block['previous_hash'],
+        'current_hash': block['current_hash']
     }
 
     print(end-start, " elapsed time")
