@@ -11,10 +11,11 @@ class Blockchain:
     def __init__(self):
         #initiate chain
         self.chain = []
+        #store the current hashes
         self.hash_lib = [0,0]
         #create the first block
         self.createBlock(proof=1, previous_hash=0)
-        #store the current hashes
+        
         
 
     #create and add block to the chain
@@ -25,9 +26,12 @@ class Blockchain:
             'index': len(self.chain) + 1,
             # time of transaction 
             'timestamp': str(datetime.datetime.now()),
+            #nonce, iterations taken to create the desired hash
             'proof': proof,
+            #show the hash of the second the last run (previous block)
             'previous_hash': self.hash_lib[-2],
-            'current_hash': self.hash_lib[-1:]
+            #show the hash of the last run (current block)
+            'current_hash': self.hash_lib[-1]
         }
         # add the block to the chain
         self.chain.append(block)
